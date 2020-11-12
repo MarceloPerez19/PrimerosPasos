@@ -16,7 +16,7 @@ namespace PrimerosPasos
             b = 20;
             suma = a + b;
             Console.WriteLine("La suma de {0} + {1}={2}", a, b, suma);
-           
+
 
             //tipo de dato: numero en coma flotante
             float sueldo, egreso, total;
@@ -28,8 +28,8 @@ namespace PrimerosPasos
 
             total = sueldo - egreso;
 
-            Console.WriteLine("El liquido del trabajador es : {0}", total); 
-            
+            Console.WriteLine("El liquido del trabajador es : {0}", total);
+
             //tipo de dato flotante de doble presicion
             double x1 = 200.5679;
             Console.WriteLine("Tipo de dato dpuble: {0}", x1);
@@ -42,7 +42,7 @@ namespace PrimerosPasos
 
             //tipo booleano (tipo logico que toma valores de verdadero o falso)
             bool sw;
-            sw = a+50 > b;
+            sw = a + 50 > b;
             Console.WriteLine("El valor del booleano : {0}", sw);
 
             //Pilares fundamentales de la programacion estructurada
@@ -59,27 +59,48 @@ namespace PrimerosPasos
             Console.WriteLine("Liquido a recibir para Saoco {0}", calcularSueldo(400, 100));
             Console.WriteLine("Liquido a recibir para Saoco {0}", calcularSueldo(10000, 596));
 
+            figura();
+            Console.WriteLine("El cuadrado de 8 es : {0}",cuadrado(8));
             Console.ReadKey();
             //fin del main
-         } 
-        
+        }
+
         //funciones : subprocesos - subprogramas - subrutinas
         //dividir el codigo en modulos
         //podemos reutilizar el codigo 
         //tipo: decuelven valores - no devuelven valores 
-    static void saludos(string nombre) //parametro - argumentos
-    {
+        static void saludos(string nombre) //parametro - argumentos
+        {
             Console.WriteLine("Funcion que no devuelve valores...");
             Console.WriteLine("HOLA {0}", nombre);
-    }
+        }
         //funcion que devuelve valores
         //la funcion devuelve un tipo de dato
-    static int calcularSueldo(int ingreso, int egreso)
+        static int calcularSueldo(int ingreso, int egreso)
         {
 
-            return (ingreso-egreso);
+            return (ingreso - egreso);
         }
 
+        //funcione que imprima la siguiente figura
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        static void figura()
+        {
+            Console.WriteLine("    *   ");
+            Console.WriteLine("   ***   ");
+            Console.WriteLine("  *****   ");
+            Console.WriteLine(" *******   ");
+        }
+        //crear la funcion que recibe un valor y devuelva el cuadrado del entero
+        
+            static int cuadrado(int numero)
+        {
+            return (numero * numero);
+        
+        }
 
     }
 }
