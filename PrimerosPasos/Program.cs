@@ -16,6 +16,7 @@ namespace PrimerosPasos
             b = 20;
             suma = a + b;
             Console.WriteLine("La suma de {0} + {1}={2}", a, b, suma);
+            Console.WriteLine();
 
 
             //tipo de dato: numero en coma flotante
@@ -33,24 +34,29 @@ namespace PrimerosPasos
             //tipo de dato flotante de doble presicion
             double x1 = 200.5679;
             Console.WriteLine("Tipo de dato dpuble: {0}", x1);
+            Console.WriteLine();
 
             //tipo de dato: cadena de caracteres 
             string nombre;
             Console.WriteLine("Nombre : ");
             nombre = Console.ReadLine();
             Console.WriteLine(" Hola " + nombre + " ,bienvenido al curso de programacion");
+            Console.WriteLine();
 
             //tipo booleano (tipo logico que toma valores de verdadero o falso)
             bool sw;
             sw = a + 50 > b;
             Console.WriteLine("El valor del booleano : {0}", sw);
+            Console.WriteLine();
 
             //Pilares fundamentales de la programacion estructurada
             //ejecucion de sentencias secuenciales
             //uso de estructuras repetitivas
             //uso estructuras selectivas
             saludos(nombre);
+            Console.WriteLine();
             saludos("Saoco");
+            Console.WriteLine();
             saludos("La chill");
 
             Console.WriteLine();
@@ -58,10 +64,19 @@ namespace PrimerosPasos
             Console.WriteLine("Liquido a recibir para Saoco {0}", calcularSueldo(500, 300));
             Console.WriteLine("Liquido a recibir para Saoco {0}", calcularSueldo(400, 100));
             Console.WriteLine("Liquido a recibir para Saoco {0}", calcularSueldo(10000, 596));
+            Console.WriteLine();
 
             figura();
-            Console.WriteLine("El cuadrado de 8 es : {0}",cuadrado(8));
+            Console.WriteLine("El cuadrado de 8 es : {0}", cuadrado(8));
+            Console.WriteLine();
+            int n;
+            Console.WriteLine("Ingresa un numero para verificar si es muy alto o muy bajo : ");
+            n = int.Parse(Console.ReadLine());
+            condicion(n);
+            Console.WriteLine();
+            tabla();
             Console.ReadKey();
+
             //fin del main
         }
 
@@ -95,12 +110,40 @@ namespace PrimerosPasos
             Console.WriteLine(" *******   ");
         }
         //crear la funcion que recibe un valor y devuelva el cuadrado del entero
-        
-            static int cuadrado(int numero)
+
+        static int cuadrado(int numero)
         {
             return (numero * numero);
-        
+
         }
+
+        //funcion con condicion
+        static void condicion(int n)
+        {
+            if (n > 100)
+            {
+                Console.WriteLine("El numero que eligio es muy alto");
+            }
+            else
+            {
+                Console.WriteLine("El numero que eligio es muy bajo");
+            }
+        }
+
+        //Funcion con un bucle
+        static void tabla()
+        {
+             int num = 8;
+             int su = 0;   
+            Console.WriteLine("La tabla del 8 es");
+            for(int a=1;a<=13;a++) 
+            {
+                
+                su = num * a;
+                Console.WriteLine("Los numeros de la tabla del 8 es : {0}", su);
+            }
+        }
+    
 
     }
 }
