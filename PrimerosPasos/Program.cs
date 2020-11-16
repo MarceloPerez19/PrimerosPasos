@@ -67,16 +67,28 @@ namespace PrimerosPasos
             Console.WriteLine();
 
             figura();
+
             Console.WriteLine("El cuadrado de 8 es : {0}", cuadrado(8));
             Console.WriteLine();
+
             int n;
             Console.WriteLine("Ingresa un numero para verificar si es muy alto o muy bajo : ");
             n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
             condicion(n);
             Console.WriteLine();
-            tabla();
-            Console.ReadKey();
 
+            tabla();
+
+            Console.WriteLine();
+            //tarea ejercicio 2
+            Console.WriteLine("tabla de multiplicar");
+            tablaTarea(6);
+            Console.WriteLine();
+            Console.WriteLine("tabla de multiplicar");
+            tablaTarea(5);
+
+            Console.ReadKey();
             //fin del main
         }
 
@@ -84,11 +96,13 @@ namespace PrimerosPasos
         //dividir el codigo en modulos
         //podemos reutilizar el codigo 
         //tipo: decuelven valores - no devuelven valores 
+
         static void saludos(string nombre) //parametro - argumentos
         {
             Console.WriteLine("Funcion que no devuelve valores...");
             Console.WriteLine("HOLA {0}", nombre);
         }
+
         //funcion que devuelve valores
         //la funcion devuelve un tipo de dato
         static int calcularSueldo(int ingreso, int egreso)
@@ -102,6 +116,7 @@ namespace PrimerosPasos
         //    ***
         //   *****
         //  *******
+
         static void figura()
         {
             Console.WriteLine("    *   ");
@@ -109,6 +124,7 @@ namespace PrimerosPasos
             Console.WriteLine("  *****   ");
             Console.WriteLine(" *******   ");
         }
+
         //crear la funcion que recibe un valor y devuelva el cuadrado del entero
 
         static int cuadrado(int numero)
@@ -143,7 +159,14 @@ namespace PrimerosPasos
                 Console.WriteLine("Los numeros de la tabla del 8 es : {0}", su);
             }
         }
-    
 
+        //tarea 2
+        static void tablaTarea(int n)
+        {
+            for(int i=1; i<=12; i++)
+            {
+                Console.WriteLine("{0} * {1} = {2}", n, i, (n * i));
+            }
+        }
     }
 }
